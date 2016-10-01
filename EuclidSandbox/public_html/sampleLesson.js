@@ -7,17 +7,19 @@ var gl;
 var program;
 
 function canvasMain(){
-    canvas = document.getElementById("glCanvas");
-    gl = WebGlUtils.setupWebGL(canvas);
+    canvas = document.getElementById("gl-canvas");
+    gl = WebGLUtils.setupWebGL(canvas);
     if(!gl){
         alert("WebGL isn't available");
     }
     gl.viewport(0,0,canvas.width,canvas.height);
     gl.clearColor(1.0,1.0,1.0,1.0);
-    program = initShaders(gl, "vertexShader", "fragmentShader");
+    program = initShaders(gl, "vertex-shader", "fragment-shader");
     gl.useProgram(program);
     gl.clear(gl.COLOR_BUFFER_BIT);
-}
+    drawObject(gl, program, diamondPoint(0,0), [0.0,0.0,0.0,1.0], gl.TRIANGLE_FAN);
+};
+
 
 function drawObject(gl, program, vertices, color, glType) {
     var colorLocation = gl.getUniformLocation(program, "uColor");
@@ -29,4 +31,5 @@ function drawObject(gl, program, vertices, color, glType) {
     gl.enableVertexAttribArray(vPosition);
     gl.uniform4f(colorLocation, color[0], color[1], color[2], color[3]);
     gl.drawArrays(glType, 0, vertices.length);
-}
+} //drawObject
+

@@ -2,31 +2,37 @@
 <html>
     <head>
         <title>Lesson</title>
-        <meta charset="UTF-8">
+      <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        
         <!--<script type="text/javascript" src="math.js"></script>
         <script type="text/javascript" src="webGlUtils.js"></script>
         <script type="text/javascript" src="initShaders.js"></script>
-        -->
-        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/webgl-utils.js"></script>
-        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/initShaders.js"></script>
-        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/MV.js"></script>
-        <script type="text/javascript" src="geometryShapes.js"></script>
-        <script id="vertexShader" type="xShader/xVertex">
+        --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="sampleLesson.js"></script> 
+         <script type="text/javascript" src="geometryShapes.js"></script> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script id="vertex-shader" type="x-shader/x-vertex">
+                    
             attribute vec4 vPosition;
             void main()
             {
-                glPosition = vPosition;
+            gl_Position = vPosition;
             }
         </script>
-        <script id="fragmentShader" type="xShader/xFragment">
+        <script id="fragment-shader" type="x-shader/x-fragment">
             precision mediump float;
             uniform vec4 uColor;
-            void main(){
-                glFragColor = uColor;
+            void main() {
+            gl_FragColor = uColor;
             }
         </script>
+       <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/initShaders.js"></script>
+        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/MV.js"></script>
+      
+      
     </head>
     <body onload="canvasMain()">
         <button type=button onclick="location.href = 'mainPage.html'" class="returntomainbutton">Return to Main Menu</button>
@@ -34,13 +40,27 @@
 
 
         <div>
-            <canvas id="glCanvas" class="geocanvas"  width="512" height="512">
+            <canvas id="gl-canvas" class="geocanvas"  width="512" height="512">
                 Browser does not support HTML canvas element
             </canvas>
         </div>
         <div class="worddiv">
             <p class="lessonwords">
-                This is where wording for the lesson will go.
+                An equilateral triangle can be constructed from any line segment.
+            </p>
+            <p class="lessonwords">
+                1) Given a line segment AB, construct a circle centered at <br> 
+                point A with a radius of AB.
+            </p>
+            <p class="lessonwords">
+                2) Construct a circle centered at <br> 
+                point B with a radius of AB.
+            </p>
+            <p class="lessonwords">
+                3) The circles intersect at point C.
+            </p>
+            <p class="lessonwords">
+                Line Segments AB, BC, and AC are all equal.
             </p>
 
         </div>
