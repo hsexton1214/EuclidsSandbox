@@ -1,0 +1,97 @@
+
+/*
+    Author     : Hannah
+*/
+body{
+    background-color: #fff5ee;
+}
+
+a{
+    font-size: 20px;
+    font-family: georgia;
+    text-align: right;
+
+}
+
+.maintitle {
+
+    text-align: center;
+    font-family: georgia;
+    font-size:48px;
+}
+.buttondiv{
+    text-align: center;
+}
+.titlebutton{
+    margin-top:300px;
+    font-family:georgia;
+    font-size:32px;
+    height:75px;
+    width:275px;
+    border-radius:4px;
+    background-color: #7b68ee;
+}
+.b1{margin-top:20px;}
+.b2{margin-top:75px;}
+.b3{margin-top:75px;}
+
+.lessontitle {
+    margin-left: 150px;
+    font-family: georgia;
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.returntomainbutton {
+    border-radius:4px;
+    background-color: #7b68ee;
+    font-size: 16px;
+    font-family: georgia;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: right;
+    margin-right: 25px;
+}
+
+.geocanvas {
+    margin-left: 20px;
+    border: 1px solid #000000;
+    float: left;
+
+}
+
+.worddiv {
+    margin-left: 580px;
+    margin-top: 75px;
+}
+
+.lessonwords {
+    font-family: georgia;
+    font-size: 24px;
+}
+
+.stepbutton {
+    border-radius:4px;
+    background-color: #7b68ee;
+    font-size: 24px;
+    font-family: georgia;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.previousstepbutton {
+    margin-left: 245px;
+    margin-top: 325px;
+    margin-right: 25px; 
+}
+
+.nextstepbutton {
+   
+   
+}
+
+
