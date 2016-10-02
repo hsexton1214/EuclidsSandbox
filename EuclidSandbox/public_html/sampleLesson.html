@@ -2,19 +2,19 @@
 <html>
     <head>
         <title>Lesson</title>
-      <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <!--<script type="text/javascript" src="math.js"></script>
         <script type="text/javascript" src="webGlUtils.js"></script>
         <script type="text/javascript" src="initShaders.js"></script>
         --> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="sampleLesson.js"></script> 
-         <script type="text/javascript" src="geometryShapes.js"></script> 
+        <script type="text/javascript" src="geometryShapes.js"></script> 
         <link rel="stylesheet" type="text/css" href="style.css">
         <script id="vertex-shader" type="x-shader/x-vertex">
-                    
+
             attribute vec4 vPosition;
             void main()
             {
@@ -28,11 +28,12 @@
             gl_FragColor = uColor;
             }
         </script>
-       <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/webgl-utils.js"></script>
         <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/initShaders.js"></script>
         <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/MV.js"></script>
-      
-      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="sampleLessonActions.js"></script> 
+
     </head>
     <body onload="canvasMain()">
         <button type=button onclick="location.href = 'mainPage.html'" class="returntomainbutton">Return to Main Menu</button>
@@ -48,26 +49,26 @@
             <p class="lessonwords">
                 An equilateral triangle can be constructed from any line segment.
             </p>
-            <p class="lessonwords">
+            <p class="lessonwords lessonStep1" style="display:none">
                 1) Given a line segment AB, construct a circle centered at <br> 
                 point A with a radius of AB.
             </p>
-            <p class="lessonwords">
+            <p class="lessonwords lessonStep2" style="display:none">
                 2) Construct a circle centered at <br> 
                 point B with a radius of AB.
             </p>
-            <p class="lessonwords">
+            <p class="lessonwords lessonStep3" style="display:none">
                 3) The circles intersect at point C.
             </p>
-            <p class="lessonwords">
+            <p class="lessonwords lessonStep4" style="display:none">
                 Line Segments AB, BC, and AC are all equal.
             </p>
 
         </div>
         <div>
-            <button type="button" onclick="" class="stepbutton previousstepbutton" >Previous</button>
+            <button type="button" onclick="" class="stepbutton previousstepbutton " id="previousstepbutton">Previous</button>
 
-            <button type="button" onclick="" class="stepbutton nextstepbutton" >Next</button>
+            <button type="button" onclick="" class="stepbutton nextstepbutton" id="nextstepbutton">Next</button>
         </div>
 
     </body>
