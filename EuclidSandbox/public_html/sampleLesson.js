@@ -17,7 +17,17 @@ function canvasMain(){
     program = initShaders(gl, "vertex-shader", "fragment-shader");
     gl.useProgram(program);
     gl.clear(gl.COLOR_BUFFER_BIT);
-    drawObject(gl, program, diamondPoint(0,0), [0.0,0.0,0.0,1.0], gl.TRIANGLE_FAN);
+    
+   
+   
+    
+    drawObject(gl, program, diamondPoint(-.25,0), [0.0,0.0,0.0,1.0], gl.TRIANGLE_FAN);
+    drawObject(gl, program, diamondPoint(.25,0), [0.0,0.0,0.0,1.0], gl.TRIANGLE_FAN);
+    drawObject(gl, program, drawLine(-.25,0,.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP);
+    drawObject(gl, program, drawLine(-.25,0,.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP); 
+    drawObject(gl, program, drawCircle(-.25,0,.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP);
+    drawObject(gl, program, drawCircle(.25,0,-.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP);
+    
 };
 
 

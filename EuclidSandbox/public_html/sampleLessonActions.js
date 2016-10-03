@@ -9,12 +9,15 @@ $(document).ready(function () {
     var stepName;
     var maxStep = 4;
     var minStep = 1;
+    var fileName;
 
     $("#nextstepbutton").click(function () {
         if (count <= maxStep) {
             stepName = "." + "lessonStep" + count;
-            $(stepName).show();
+            $(stepName).show();fileName = "sampleLessonAction" + count + ".js";
+            $.getScript(fileName);
             count = count + 1;
+            
         }
     });
     
@@ -22,6 +25,8 @@ $(document).ready(function () {
         if (count >= minStep) {
             stepName = "." + "lessonStep" + count;
             $(stepName).hide();
+            fileName = "sampleLessonAction" + count + ".js";
+            $.getScript(fileName);
             count = count - 1;
         }
     });

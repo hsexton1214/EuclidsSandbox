@@ -2,8 +2,8 @@
 
 //This function takes in point (x,y) and draws a small diamond shape to 
 //represent a point
-function diamondPoint(x,y){
-     var pointSize = .02;
+function diamondPoint(x, y) {
+    var pointSize = .02;
     var pointVertices = [
         vec2(x - pointSize, y),
         vec2(x, y + pointSize),
@@ -11,7 +11,8 @@ function diamondPoint(x,y){
         vec2(x, y - pointSize)
     ];
     return pointVertices;
-};
+}
+;
 
 //This function takes in the center (x1,y1) and a point on the circle (x2,y2)
 function drawCircle(x1, y1, x2, y2) {
@@ -33,21 +34,21 @@ function drawLine(x1, y1, x2, y2) {
     return lineVertices;
 }
 ; //drawLine
-
-//This function takes in the endpoints of 2 lines and finds the intersection.
-//It currently still has bugs though and is not implempented in the program.
-function lineIntersection(x1, y1, x2, y2, x3, y3, x4, y4) {
-    var slopeLine1 = (y2 - y1) / (x2 - x1);
-    var slopeLine2 = (y4 - y3) / (x4 - x3);
-    var xInter = (x1 * slopeLine1 - x3 * slopeLine2) / (slopeLine1 - slopeLine2);
-    var yInter = slopeLine1 * (xInter - x1) + y1;
-    drawObject(gl, program, drawPoint(xInter, yInter), centroidColor, gl.TRIANGLE_FAN);
-}
-;//lineIntersection
-
-
-//This function requires that the 2 circles have an equal radius and that the 
-//points given in parameter, (a,b) and (c,d), be r distance from one another
+//
+////This function takes in the endpoints of 2 lines and finds the intersection.
+////It currently still has bugs though and is not implempented in the program.
+//function lineIntersection(x1, y1, x2, y2, x3, y3, x4, y4) {
+//    var slopeLine1 = (y2 - y1) / (x2 - x1);
+//    var slopeLine2 = (y4 - y3) / (x4 - x3);
+//    var xInter = (x1 * slopeLine1 - x3 * slopeLine2) / (slopeLine1 - slopeLine2);
+//    var yInter = slopeLine1 * (xInter - x1) + y1;
+//    drawObject(gl, program, drawPoint(xInter, yInter), centroidColor, gl.TRIANGLE_FAN);
+//}
+//;//lineIntersection
+//
+////
+//////This function requires that the 2 circles have an equal radius and that the 
+//////points given in parameter, (a,b) and (c,d), be r distance from one another
 function calculateCircleIntersection(a, b, c, d, genInterColor) {
     //center0x and center0y are always 0
     var center2x = c - a;
