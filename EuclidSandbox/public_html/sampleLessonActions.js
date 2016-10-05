@@ -14,8 +14,10 @@ $(document).ready(function () {
     $("#nextstepbutton").click(function () {
         if (count <= maxStep) {
             stepName = "." + "lessonStep" + count;
-            $(stepName).show();fileName = "sampleLessonAction" + count + ".js";
-            $.getScript(fileName);
+            $(stepName).show();
+            //fileName = "sampleLessonAction" + count + ".js";
+            //$.getScript(fileName);
+            setAction1(1);
             count = count + 1;
             
         }

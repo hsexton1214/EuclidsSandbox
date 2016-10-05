@@ -5,30 +5,40 @@
  */
 var gl;
 var program;
+var action1;
 
-function canvasMain(){
+function canvasMain() {
     canvas = document.getElementById("gl-canvas");
     gl = WebGLUtils.setupWebGL(canvas);
-    if(!gl){
+    if (!gl) {
         alert("WebGL isn't available");
     }
-    gl.viewport(0,0,canvas.width,canvas.height);
-    gl.clearColor(1.0,1.0,1.0,1.0);
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clearColor(1.0, 1.0, 1.0, 1.0);
     program = initShaders(gl, "vertex-shader", "fragment-shader");
     gl.useProgram(program);
     gl.clear(gl.COLOR_BUFFER_BIT);
-    
-   
-   
-    
-    drawObject(gl, program, diamondPoint(-.25,0), [0.0,0.0,0.0,1.0], gl.TRIANGLE_FAN);
-    drawObject(gl, program, diamondPoint(.25,0), [0.0,0.0,0.0,1.0], gl.TRIANGLE_FAN);
-    drawObject(gl, program, drawLine(-.25,0,.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP);
-    drawObject(gl, program, drawLine(-.25,0,.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP); 
-    drawObject(gl, program, drawCircle(-.25,0,.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP);
-    drawObject(gl, program, drawCircle(.25,0,-.25,0), [0.0,0.0,0.0,1.0], gl.LINE_STRIP);
-    
+
+    action1 = 0;
+
+    //if (action1 === 1) {
+        drawObject(gl, program, diamondPoint(-.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, diamondPoint(.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawCircle(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawCircle(.25, 0, -.25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+   // }
+}
+;
+
+
+function setAction1 (action) {
+    alert("action");
+    action1 = action;
 };
+
+
 
 
 function drawObject(gl, program, vertices, color, glType) {
