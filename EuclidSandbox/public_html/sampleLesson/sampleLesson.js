@@ -6,8 +6,10 @@
 var gl;
 var program;
 var action1;
+var step;
 
-function canvasMain() {
+function canvasMain(step) {
+    
     canvas = document.getElementById("gl-canvas");
     gl = WebGLUtils.setupWebGL(canvas);
     if (!gl) {
@@ -19,24 +21,48 @@ function canvasMain() {
     gl.useProgram(program);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    action1 = 0;
+    //action1 = 0;
+    if(step === 0){
+        drawObject(gl, program, diamondPoint(-.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, diamondPoint(.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+    }
 
-    //if (action1 === 1) {
+    if (step === 1) {
+        drawObject(gl, program, diamondPoint(-.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, diamondPoint(.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawCircle(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+    }
+    if (step === 2) {
         drawObject(gl, program, diamondPoint(-.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
         drawObject(gl, program, diamondPoint(.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
         drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
         drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
         drawObject(gl, program, drawCircle(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
         drawObject(gl, program, drawCircle(.25, 0, -.25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
-   // }
+    }
+    
+    if (step === 4) {
+        drawObject(gl, program, diamondPoint(-.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, diamondPoint(.25, 0), [0.0, 0.0, 0.0, 1.0], gl.TRIANGLE_FAN);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawCircle(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawCircle(.25, 0, -.25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+        drawObject(gl, program, drawLine(-.25, 0, .25, 0), [0.0, 0.0, 0.0, 1.0], gl.LINE_STRIP);
+    }
 }
 ;
 
 
-function setAction1 (action) {
-    alert("action");
+function setAction1(action) {
+    // alert("action");
     action1 = action;
-};
+}
+;
 
 
 

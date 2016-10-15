@@ -1,0 +1,17 @@
+<p class="lessonwords">
+    An equilateral triangle can be constructed from any line segment.
+</p> &
+<p class="lessonwords lessonStep1" >
+    1) Given a line segment AB, construct a circle centered at <br> 
+    point A with a radius of AB.
+</p> &
+<p class="lessonwords lessonStep2">
+    2) Construct a circle centered at <br> 
+    point B with a radius of AB.
+</p> &
+<p class="lessonwords lessonStep3" >
+    3) The circles intersect at point C.
+</p> &
+<p class="lessonwords lessonStep4" >
+    Line Segments AB, BC, and AC are all equal.
+</p>

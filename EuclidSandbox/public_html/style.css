@@ -88,13 +88,17 @@ a{
 }
 
 .previousstepbutton {
+    position:absolute;
+   
     margin-left: 245px;
-    margin-top: 325px;
+    top: 575px;
     margin-right: 25px; 
 }
 
 .nextstepbutton {
-   
+   position:absolute;
+   top: 575px;
+   margin-left:400px;
    
 }
 
