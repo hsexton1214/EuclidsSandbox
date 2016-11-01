@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Angles of a Triangle add up to 180 degrees</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--<script type="text/javascript" src="math.js"></script>
+        <script type="text/javascript" src="webGlUtils.js"></script>
+        <script type="text/javascript" src="initShaders.js"></script>
+        --> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/webgl-utils.js"></script>
+        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/initShaders.js"></script>
+        <script type="text/javascript" src="http://arden.cs.unca.edu/~cameron/Angel/SourceCode/Common/MV.js"></script>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <script id="vertex-shader" type="x-shader/x-vertex">
+
+            attribute vec4 vPosition;
+            void main()
+            {
+            gl_Position = vPosition;
+            }
+        </script>
+        <script id="fragment-shader" type="x-shader/x-fragment">
+            precision mediump float;
+            uniform vec4 uColor;
+            void main() {
+            gl_FragColor = uColor;
+            }
+        </script>
+        <script type="text/javascript" src="../geometryShapes.js"></script> 
+        <script type="text/javascript" src="triangleAngles.js"></script> 
+
+        <script type="text/javascript" src="triangleAnglesActions.js"></script> 
+
+    </head>
+    <body onload="canvasMain(0);readFile()">
+        <button type=button onclick="location.href = '../mainPage.html'" class="returntomainbutton">Return to Main Menu</button>
+        <h1 class="lessontitle">Angles of a Triangle Add up to 180 degrees</h1>
+
+
+        <div>
+            <canvas id="gl-canvas" class="geocanvas"  width="512" height="512">
+                Browser does not support HTML canvas element
+            </canvas>
+            <div class="worddiv">
+            </div> 
+
+            <button type="button" onclick="" class="stepbutton previousstepbutton " id="previousstepbutton">Previous</button>
+
+            <button type="button" onclick="" class="stepbutton nextstepbutton" id="nextstepbutton">Next</button>
+        </div>
+
+    </body>
+</html>

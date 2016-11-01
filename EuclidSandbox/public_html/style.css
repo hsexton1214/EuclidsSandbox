@@ -33,7 +33,7 @@ a{
     height:75px;
     width:275px;
     border-radius:4px;
-    background-color: #7b68ee;
+    background-color: #d9d8f9;
 }
 .b1{margin-top:20px;}
 .b2{margin-top:75px;}
@@ -48,7 +48,7 @@ a{
 
 .returntomainbutton {
     border-radius:4px;
-    background-color: #7b68ee;
+    background-color: #d9d8f9;
     font-size: 16px;
     font-family: georgia;
     padding-top: 5px;
@@ -78,7 +78,7 @@ a{
 
 .stepbutton {
     border-radius:4px;
-    background-color: #7b68ee;
+    background-color: #d9d8f9;
     font-size: 24px;
     font-family: georgia;
     padding-top: 5px;
@@ -103,3 +103,41 @@ a{
 }
 
 
+
+.subTitle {
+    text-align: center;
+    font-family: georgia;
+    font-size:40px;    
+}
+
+.flip, .panel, .panelButton {
+    
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 15px;
+    text-align: center;
+    background-color: #d9d8f9;
+    border: solid 1px #000000;
+    font-family: georgia;
+    font-size:28px;    
+}
+
+.flip {
+    margin-top: 50px;
+}
+
+.panel {
+    padding: 0px;
+    display: none;
+}
+.panelButton {
+width: 100%;
+border-radius: 0px;
+border: none;
+margin-left: 0px;
+}
+
+.panelButton:hover {
+    background-color: #6866af;
+    color: #d8d7fd;  
+}

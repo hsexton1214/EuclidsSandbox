@@ -1,0 +1,5 @@
+<p class="lessonwords">Before talking about triangle angles, we must discuss the alternative interior angle theorem. </p>
+&
+<p class="lessonwords lessonStep1">The Alternate Interior Angle Theorem states that given two lines cut by a 
+traversal(a third line that intersects the first two lines) have a pair of congruent 
+alternate interior angles, then the two lines are parallel. </p>
